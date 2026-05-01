@@ -10,18 +10,19 @@
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+  /* Reversed Palette: Light Slate Backgrounds with Darker Content */
   :root {
-    --bg:      #0d1520;
-    --bg2:     #111c2d;
-    --bg3:     #162035;
-    --border:      #ffffff12;
-    --border-em:   #ffffff22;
-    --accent:      #8ba7c7;
-    --accent2:     #a8c0d8;
-    --text-hi:  #e8edf3;
-    --text-md:  #9aadc2;
-    --text-lo:  #5c7190;
-    --slate:    #3a5270;
+    --bg:      #eef2f6; /* Light Slate base */
+    --bg2:     #e2e8f0; /* Slightly darker slate for contrast */
+    --bg3:     #d1dbe7; /* Deepest background slate */
+    --border:      #0d15201a;
+    --border-em:   #0d152033;
+    --accent:      #3a5270; /* Slate Blue primary accent */
+    --accent2:     #162035; /* Darker Navy secondary accent */
+    --text-hi:  #0d1520; /* Deepest Navy for high contrast text */
+    --text-md:  #334155; /* Slate Gray for medium text */
+    --text-lo:  #64748b; /* Lighter Slate for low emphasis text */
+    --slate:    #cbd5e1;
   }
 
   html { scroll-behavior: smooth; }
@@ -42,7 +43,7 @@
   /* ── NAV ── */
   nav {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(13,21,32,0.97);
+    background: rgba(238, 242, 246, 0.97); /* Matches light --bg */
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     padding: 0 48px;
@@ -61,7 +62,7 @@
     font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
     transition: color 0.2s;
   }
-  .nav-links a:hover { color: var(--accent2); }
+  .nav-links a:hover { color: var(--accent); }
 
   /* ── HERO ── */
   .hero {
@@ -89,7 +90,7 @@
     line-height: 1.06; color: var(--text-hi);
     margin-bottom: 24px; letter-spacing: -0.02em;
   }
-  .hero-name em { font-style: italic; color: var(--accent2); }
+  .hero-name em { font-style: italic; color: var(--accent); }
   .hero-roles {
     font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--text-lo); line-height: 2.4; margin-bottom: 32px;
@@ -107,9 +108,9 @@
     text-transform: uppercase; font-weight: 500;
     text-decoration: none; font-family: 'Inter', sans-serif;
     border: 1px solid var(--accent);
-    transition: background 0.2s; display: inline-block; cursor: pointer;
+    transition: opacity 0.2s; display: inline-block; cursor: pointer;
   }
-  .btn-a:hover { background: var(--accent2); }
+  .btn-a:hover { opacity: 0.9; }
   .btn-b {
     background: transparent; color: var(--text-md);
     padding: 11px 28px; font-size: 11px; letter-spacing: 0.12em;
@@ -136,7 +137,7 @@
     font-size: 34px; font-weight: 400;
     color: var(--text-hi); line-height: 1; margin-bottom: 5px;
   }
-  .metric-val em { font-style: italic; color: var(--accent2); }
+  .metric-val em { font-style: italic; color: var(--accent); }
   .metric-desc {
     font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--text-lo); line-height: 1.5;
@@ -163,7 +164,7 @@
     font-size: clamp(28px, 3.5vw, 40px); font-weight: 400;
     color: var(--text-hi); line-height: 1.1; margin-bottom: 48px;
   }
-  .sec-h em { font-style: italic; color: var(--accent2); }
+  .sec-h em { font-style: italic; color: var(--accent); }
 
   /* ── ABOUT ── */
   #about { background: var(--bg); }
@@ -196,7 +197,7 @@
     font-size: 30px; font-weight: 400;
     color: var(--text-hi); line-height: 1; margin-bottom: 6px;
   }
-  .hl-num em { font-style: italic; color: var(--accent2); }
+  .hl-num em { font-style: italic; color: var(--accent); }
   .hl-text { font-size: 12px; color: var(--text-lo); line-height: 1.6; }
 
   /* ── CAPABILITIES ── */
@@ -243,7 +244,7 @@
     color: var(--text-lo); border: 1px solid var(--border);
     padding: 7px 16px; transition: all 0.2s; cursor: default;
   }
-  .tag:hover { color: var(--accent2); border-color: var(--slate); }
+  .tag:hover { color: var(--text-hi); border-color: var(--accent); }
 
   /* ── BOARD ── */
   #board { background: var(--bg); }
@@ -289,15 +290,15 @@
   .contact-row { display: flex; gap: 32px; flex-wrap: wrap; }
   .c-link {
     font-size: 13px; letter-spacing: 0.05em;
-    color: var(--accent2); text-decoration: none;
+    color: var(--accent); text-decoration: none;
     border-bottom: 1px solid var(--border-em);
     padding-bottom: 2px; transition: border-color 0.2s;
   }
-  .c-link:hover { border-color: var(--accent2); }
+  .c-link:hover { border-color: var(--text-hi); }
 
   /* ── FOOTER ── */
   footer {
-    background: var(--bg);
+    background: var(--bg2);
     border-top: 1px solid var(--border);
     padding: 22px 48px;
     display: flex; justify-content: space-between; align-items: center;
@@ -329,8 +330,7 @@
 </style>
 </head>
 <body>
-
-<!-- NAV -->
+<!-- Content remains the same as source -->
 <nav>
   <div class="nav-id">Charles <span>Gamo</span></div>
   <ul class="nav-links">
@@ -342,7 +342,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
     <div>
@@ -387,7 +386,6 @@
   </div>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="inner">
     <p class="sec-label">Professional Profile</p>
@@ -428,7 +426,6 @@
   </div>
 </section>
 
-<!-- CAPABILITIES -->
 <section id="capabilities">
   <div class="inner">
     <p class="sec-label">Core Capabilities</p>
@@ -468,7 +465,6 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="inner">
     <p class="sec-label">Career History</p>
@@ -548,7 +544,6 @@
   </div>
 </section>
 
-<!-- SECTORS -->
 <section id="sectors">
   <div class="inner">
     <p class="sec-label">Sector Experience</p>
@@ -574,7 +569,6 @@
   </div>
 </section>
 
-<!-- BOARD -->
 <section id="board">
   <div class="inner">
     <p class="sec-label">Independent Director</p>
@@ -600,7 +594,6 @@
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
   <div class="inner">
     <p class="sec-label">Academic &amp; Professional Formation</p>
@@ -645,7 +638,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="inner">
     <p class="sec-label">Get in Touch</p>
@@ -659,7 +651,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="foot-name serif">Charles A. Gamo &nbsp;—&nbsp; Metro Manila, Philippines</div>
   <div class="foot-note">Senior Financial Adviser · Principal Investor · Corporate Strategist</div>
