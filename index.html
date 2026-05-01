@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Charles Alvarez Gamo | Senior Financial Adviser · Principal Investor · Corporate Strategist</title>
+<title>Charles Alvarez Gamo | Senior Financial Adviser · Professional Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,7 +27,6 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
     background: var(--bg);
     color: var(--text-hi);
     font-size: 18px;
@@ -48,17 +47,12 @@
     height: 75px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .nav-id {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px; font-weight: 400;
-    color: var(--text-hi); letter-spacing: 0.02em;
-  }
+  .nav-id { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--text-hi); }
   .nav-id span { color: var(--accent); }
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a {
-    color: var(--text-lo); text-decoration: none;
-    font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
-    font-weight: 700; transition: color 0.2s;
+    color: var(--text-lo); text-decoration: none; font-size: 14px;
+    letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700;
   }
   .nav-links a:hover { color: var(--accent); }
 
@@ -83,7 +77,6 @@
     font-family: 'Playfair Display', serif;
     font-size: clamp(34px, 4.5vw, 62px); font-weight: 400;
     line-height: 1.1; color: var(--text-hi); margin-bottom: 28px;
-    white-space: nowrap; 
   }
   .hero-roles {
     font-size: 15px; letter-spacing: 0.05em; text-transform: uppercase;
@@ -95,27 +88,13 @@
     font-size: 17px; line-height: 1.95; color: var(--text-md);
     max-width: 580px; margin-bottom: 44px;
   }
-  .btn-a {
-    background: var(--accent); color: white; padding: 16px 36px;
-    font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
-    font-weight: 700; text-decoration: none; border: 1px solid var(--accent);
-    transition: background 0.2s; display: inline-block;
-  }
-  .btn-a:hover { background: var(--accent2); }
 
   /* ── METRICS PANEL ── */
   .metrics-panel { border: 1px solid var(--border-em); background: var(--bg2); }
   .metric-row { padding: 24px 28px; border-bottom: 1px solid var(--border); }
-  .metric-row:last-child { border-bottom: none; }
-  .metric-val {
-    font-family: 'Playfair Display', serif; font-size: 38px;
-    color: var(--text-hi); line-height: 1; margin-bottom: 8px;
-  }
+  .metric-val { font-family: 'Playfair Display', serif; font-size: 38px; color: var(--text-hi); line-height: 1; }
   .metric-val em { font-style: italic; color: var(--accent); }
-  .metric-desc {
-    font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase;
-    color: var(--text-lo); font-weight: 600;
-  }
+  .metric-desc { font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-lo); font-weight: 600; }
 
   /* ── SECTIONS ── */
   section { padding: 100px 48px; border-bottom: 1px solid var(--border); }
@@ -125,19 +104,48 @@
     color: var(--text-lo); font-weight: 700; display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
   }
   .sec-label::before { content: ''; width: 24px; height: 2px; background: var(--accent); }
-  .sec-h { font-family: 'Playfair Display', serif; font-size: clamp(34px, 4.5vw, 42px); font-weight: 400; margin-bottom: 60px; }
+  .sec-h { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 400; margin-bottom: 60px; }
   .sec-h em { font-style: italic; color: var(--accent); }
 
-  /* ── PROFILE ── */
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
-  .creds { list-style: none; margin-top: 32px; border-top: 1px solid var(--border); }
-  .creds li {
-    font-size: 15px; color: var(--text-lo); padding: 16px 0;
-    border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; font-weight: 500;
+  /* ── CAREER HISTORY GRID ── */
+  .career-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
   }
-  .creds li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .career-item {
+    padding: 40px 0;
+    border-top: 1px solid var(--border-em);
+  }
+  .career-date {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-lo);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    opacity: 0.6;
+  }
+  .career-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-hi);
+    margin-bottom: 4px;
+  }
+  .career-org {
+    font-size: 15px;
+    color: var(--text-lo);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  .career-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-md);
+  }
 
-  /* ── CAPABILITIES GRID (Alternating Backgrounds) ── */
+  /* ── CAPABILITIES ── */
   .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); }
   .cap-card { padding: 48px; min-height: 320px; }
   .cap-card:nth-child(odd) { background: var(--bg); }
@@ -146,38 +154,14 @@
   .cap-title { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 12px; }
   .cap-body { font-size: 15px; color: var(--text-md); font-weight: 500; }
 
-  /* ── SECTOR TAGS ── */
-  .sectors-wrap { display: flex; flex-wrap: wrap; gap: 12px; }
-  .tag {
-    font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--text-lo); border: 1.5px solid var(--border-em);
-    padding: 10px 20px; font-weight: 700; background: var(--bg);
-  }
-
-  /* ── CAREER HISTORY ── */
-  .exp-list { border-top: 1px solid var(--border-em); }
-  .exp-item { padding: 48px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 240px 1fr; gap: 48px; }
-  .exp-time { font-size: 14px; font-weight: 700; color: var(--accent); text-transform: uppercase; }
-  .exp-title { font-family: 'Playfair Display', serif; font-size: 24px; line-height: 1.2; margin-bottom: 8px; }
-  .exp-org { font-size: 16px; color: var(--text-lo); font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
-  .exp-desc { font-size: 17px; color: var(--text-md); }
-
   /* ── CONTACT ── */
-  .contact-body { font-family: 'Libre Baskerville', serif; font-size: 18px; color: var(--text-md); max-width: 800px; margin-bottom: 40px; }
-  .contact-links { display: flex; gap: 40px; flex-wrap: wrap; }
-  .c-link { font-weight: 700; color: var(--accent); text-decoration: none; border-bottom: 2px solid var(--border-em); padding-bottom: 4px; transition: 0.2s; }
-  .c-link:hover { color: var(--text-hi); border-color: var(--text-hi); }
-
-  /* ── FOOTER ── */
-  footer { background: var(--bg2); padding: 40px 48px; }
+  .contact-links { display: flex; gap: 40px; margin-top: 40px; }
+  .c-link { font-weight: 700; color: var(--accent); text-decoration: none; border-bottom: 2px solid var(--border-em); }
 
   @media (max-width: 900px) {
-    .hero-inner, .about-grid, .exp-item, .cap-grid { grid-template-columns: 1fr; }
-    .hero-name { white-space: normal; }
+    .hero-inner, .career-grid, .cap-grid { grid-template-columns: 1fr; }
     nav .nav-links { display: none; }
     .metrics-panel { display: none; }
-    section { padding: 60px 24px; }
-    .cap-card:nth-child(even) { background: var(--bg2); } /* Better contrast on mobile stacks */
   }
 </style>
 </head>
@@ -188,7 +172,6 @@
   <ul class="nav-links">
     <li><a href="#about">Profile</a></li>
     <li><a href="#capabilities">Capabilities</a></li>
-    <li><a href="#sectors">Sectors</a></li>
     <li><a href="#experience">History</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -201,54 +184,77 @@
       <h1 class="hero-name serif">Charles Alvarez Gamo</h1>
       <p class="hero-roles">
         Capital Adviser &amp; Arranger &nbsp;·&nbsp; Corporate Strategist<br>
-        <span>Principal Investing &amp; Portfolio Oversight</span><br>
-        Governance, Risk &amp; Compliance &nbsp;·&nbsp; Investor Relations
+        <span>Principal Investing &amp; Portfolio Oversight</span>
       </p>
       <p class="hero-summary bask">
-        Over three decades of leadership across corporate finance, investment banking, and principal investing — deploying and advising capital across energy, financial services, property, healthcare, and technology sectors in the Philippines and beyond.
+        Over three decades of leadership across corporate finance, investment banking, and principal investing.
       </p>
-      <div class="cta-row">
-        <a href="#contact" class="btn-a">Engage Charles</a>
-      </div>
     </div>
-
     <aside class="metrics-panel">
       <div class="metric-row">
         <div class="metric-val serif">&#8369;26.5<em>B</em></div>
-        <div class="metric-desc">Capital deployed — debt &amp; equity transactions</div>
+        <div class="metric-desc">Capital deployed in major transactions</div>
       </div>
-      <div class="metric-row">
-        <div class="metric-val serif">USD 1.5<em>B</em></div>
-        <div class="metric-desc">GOCC debt refinancing structured &amp; arranged</div>
-      </div>
-      <div class="metric-row">
+      <div class="metric-row" style="border-bottom: none;">
         <div class="metric-val serif">35<em>+</em></div>
-        <div class="metric-desc">Years across capital markets, investing &amp; governance</div>
+        <div class="metric-desc">Years in capital markets &amp; governance</div>
       </div>
     </aside>
   </div>
 </header>
 
-<section id="about">
+<section id="experience">
   <div class="inner">
-    <p class="sec-label">Professional Profile</p>
-    <h2 class="sec-h serif">Strategic Advisor &amp; <em>Investor</em></h2>
-    <div class="about-grid">
-      <div class="about-copy">
-        <p class="bask">Charles Alvarez Gamo has spent over three decades at the intersection of capital allocation, strategic advisory, and governance — originating and executing transactions, evaluating and managing investments, and advising boards and executives across the Philippines' most demanding industries.</p>
-        <ul class="creds">
-          <li>Certified Management Accountant — ICMA Australia</li>
-          <li>Certified Risk Analyst</li>
-          <li>Certified Executive Coach</li>
-          <li>Oxford Fintech Programme</li>
-          <li>MSc Finance, London Business School</li>
-        </ul>
+    <p class="sec-label">Career History</p>
+    <h2 class="sec-h serif">Operator, adviser, <em>and investor</em></h2>
+    
+    <div class="career-grid">
+      <!-- Column 1 -->
+      <div class="career-col">
+        <article class="career-item">
+          <p class="career-date">2025 — Present</p>
+          <h3 class="career-role">Deal Consultant</h3>
+          <p class="career-org">Mabuhay Capital Corporation</p>
+          <p class="career-desc">Oversight on strategic transactions and private/public capital-raising engagements.</p>
+        </article>
+
+        <article class="career-item">
+          <p class="career-date">2023 — 2025</p>
+          <h3 class="career-role">VP, Head of Investor Relations</h3>
+          <p class="career-org">PNB Holdings Corporation</p>
+          <p class="career-desc">Preparation for Listing by Way of Introduction. SEC/PSE compliance and strategic investment due diligence.</p>
+        </article>
+
+        <article class="career-item">
+          <p class="career-date">2021 — 2022</p>
+          <h3 class="career-role">Head, Corporate Planning &amp; BD</h3>
+          <p class="career-org">Atlantic, Gulf &amp; Pacific Company (AG&amp;P)</p>
+          <p class="career-desc">Executed USD 135M early repayment of syndicated term loan. Led capital raising for energy businesses.</p>
+        </article>
       </div>
-      <div class="highlights">
-        <div class="hl-card" style="background: var(--bg3); padding: 32px; border-left: 4px solid var(--accent);">
-          <div class="hl-num serif">ICD Gold</div>
-          <div class="hl-text" style="font-size: 15px; font-weight: 500;">Recognized for Excellence in Corporate Governance by the Institute of Corporate Directors.</div>
-        </div>
+
+      <!-- Column 2 -->
+      <div class="career-col">
+        <article class="career-item">
+          <p class="career-date">2017 — 2019</p>
+          <h3 class="career-role">Director, Origination</h3>
+          <p class="career-org">China Bank Capital Corporation</p>
+          <p class="career-desc">Originated and executed &#8369;26.5 billion in debt and equity transactions across energy, property, and FMCG.</p>
+        </article>
+
+        <article class="career-item">
+          <p class="career-date">2012 — 2015</p>
+          <h3 class="career-role">FVP, Corporate Services</h3>
+          <p class="career-org">Aboitiz Power Corporation</p>
+          <p class="career-desc">Built corporate services for operating companies with 1,300 MW capacity. Led strategy and risk management.</p>
+        </article>
+
+        <article class="career-item">
+          <p class="career-date">1993 — 2008</p>
+          <h3 class="career-role">Earlier Career</h3>
+          <p class="career-org">Ayala Corp · Unilab · SGV &amp; Co · PCI Capital</p>
+          <p class="career-desc">Foundational roles in investment banking, corporate finance, and business development for major issuers.</p>
+        </article>
       </div>
     </div>
   </div>
@@ -257,110 +263,22 @@
 <section id="capabilities">
   <div class="inner">
     <p class="sec-label">Core Capabilities</p>
-    <h2 class="sec-h serif">Strategic <em>Value Drivers</em></h2>
     <div class="cap-grid">
       <div class="cap-card">
         <span class="cap-num">01 · Capital Markets</span>
-        <h3 class="cap-title serif">Transaction Structuring &amp; Advisory</h3>
-        <p class="cap-body">End-to-end origination and execution of public and private debt/equity transactions. Expert in financial modelling, business valuation, and joint venture structuring.</p>
+        <h3 class="cap-title serif">Transaction Structuring</h3>
+        <p class="cap-body">Execution of debt/equity transactions and financial modelling.</p>
       </div>
       <div class="cap-card">
-        <span class="cap-num">02 · Stakeholder Relations</span>
-        <h3 class="cap-title serif">Investor Relations &amp; Communications</h3>
-        <p class="cap-body">Extensive experience in managing shareholder value, Listing by Way of Introduction, and strategic investor due diligence to ensure market alignment and regulatory clarity.</p>
+        <span class="cap-num">02 · Principal Investing</span>
+        <h3 class="cap-title serif">Strategic Planning &amp; Corporate Development</h3>
+        <p class="cap-body">Direct investment oversight, M&amp;A evaluation, and strategic growth frameworks.</p>
       </div>
       <div class="cap-card">
-        <span class="cap-num">03 · Strategy</span>
-        <h3 class="cap-title serif">Corporate Strategy &amp; Development</h3>
-        <p class="cap-body">Strategic planning using Balanced Scorecard and OKR frameworks to institutionalize growth and operational efficiency.</p>
+        <span class="cap-num">03 · Governance</span>
+        <h3 class="cap-title serif">GRC &amp; ESG</h3>
+        <p class="cap-body">Risk management and ESG disclosure for listed entities.</p>
       </div>
-      <div class="cap-card">
-        <span class="cap-num">04 · Investing</span>
-        <h3 class="cap-title serif">Principal Investing</h3>
-        <p class="cap-body">Direct investment screening, thesis development, and deal underwriting across growth-stage and established companies.</p>
-      </div>
-      <div class="cap-card">
-        <span class="cap-num">05 · Governance</span>
-        <h3 class="cap-title serif">GRC &amp; Board Engagement</h3>
-        <p class="cap-body">Integrated risk management, corporate governance advisory, and ESG disclosure standards for publicly listed entities.</p>
-      </div>
-      <div class="cap-card">
-        <span class="cap-num">06 · Coaching</span>
-        <h3 class="cap-title serif">Executive Coaching &amp; Readiness</h3>
-        <p class="cap-body">Sharpening strategic clarity and investment readiness for C-suite leaders and founder teams during critical growth inflection points.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="sectors">
-  <div class="inner">
-    <p class="sec-label">Sector Expertise</p>
-    <h2 class="sec-h serif">Market <em>Coverage</em></h2>
-    <div class="sectors-wrap">
-      <span class="tag">Financial Services</span>
-      <span class="tag">Energy &amp; Power</span>
-      <span class="tag">Property Development</span>
-      <span class="tag">Healthcare</span>
-      <span class="tag">Technology &amp; Fintech</span>
-      <span class="tag">Consumer Goods</span>
-    </div>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="inner">
-    <p class="sec-label">Career History</p>
-    <h2 class="sec-h serif">Professional <em>Chronology</em></h2>
-    <div class="exp-list">
-      <article class="exp-item">
-        <div class="exp-time">Nov 2023 – Mar 2025</div>
-        <div>
-          <h3 class="exp-title">VP &amp; Head of Investor Relations</h3>
-          <p class="exp-org">PNB Holdings Corporation</p>
-          <p class="exp-desc">Led strategic preparation for Listing by Way of Introduction. Managed investment due diligence and stakeholder transparency.</p>
-        </div>
-      </article>
-      <article class="exp-item">
-        <div class="exp-time">Jun 2021 – Aug 2022</div>
-        <div>
-          <h3 class="exp-title">Head, Corporate Planning &amp; Business Development</h3>
-          <p class="exp-org">Atlantic, Gulf &amp; Pacific Company (AG&amp;P)</p>
-          <p class="exp-desc">Managed capital raising for energy infrastructure projects and oversaw a USD 135M syndicated loan repayment.</p>
-        </div>
-      </article>
-      <article class="exp-item">
-        <div class="exp-time">Nov 2017 – May 2019</div>
-        <div>
-          <h3 class="exp-title">Director, Origination</h3>
-          <p class="exp-org">China Bank Capital Corporation</p>
-          <p class="exp-desc">Originated and executed &#8369;26.5B in debt and equity transactions for power, property, and healthcare sectors.</p>
-        </div>
-      </article>
-      <article class="exp-item">
-        <div class="exp-time">Jul 2012 – Jun 2015</div>
-        <div>
-          <h3 class="exp-title">FVP, Corporate Services</h3>
-          <p class="exp-org">Aboitiz Power Corporation</p>
-          <p class="exp-desc">Established corporate services for a 1,300 MW generation portfolio and led regional strategy initiatives.</p>
-        </div>
-      </article>
-      <article class="exp-item">
-        <div class="exp-time">Feb 2008 – Jun 2012</div>
-        <div>
-          <h3 class="exp-title">VP, Corporate Planning &amp; Investor Relations</h3>
-          <p class="exp-org">RCBC</p>
-          <p class="exp-desc">Spearheaded the Balanced Scorecard implementation and managed investor communications during key growth cycles.</p>
-        </div>
-      </article>
-      <article class="exp-item">
-        <div class="exp-time">Nov 2003 – Jan 2008</div>
-        <div>
-          <h3 class="exp-title">Department Manager, Finance</h3>
-          <p class="exp-org">PSALM</p>
-          <p class="exp-desc">Executed a USD 1.5B debt refinancing program and optimized capital structure for power sector liabilities.</p>
-        </div>
-      </article>
     </div>
   </div>
 </section>
@@ -369,9 +287,6 @@
   <div class="inner">
     <p class="sec-label">Get in Touch</p>
     <h2 class="sec-h serif">Available for <em>Select Mandates</em></h2>
-    <p class="contact-body">
-      Charles is available on a selective basis for senior corporate strategy, financial advisory, investor relations, strategic investment, and M&amp;A roles and mandates, as well as for Board directorships.
-    </p>
     <div class="contact-links">
       <a href="mailto:charles.gamo@gmail.com" class="c-link">charles.gamo@gmail.com</a>
       <a href="https://www.linkedin.com/in/charlesgamo" class="c-link" target="_blank">LinkedIn Profile</a>
@@ -380,7 +295,7 @@
 </section>
 
 <footer>
-  <div class="inner" style="display: flex; justify-content: space-between; padding: 40px 0; border-top: 1px solid var(--border);">
+  <div class="inner" style="display: flex; justify-content: space-between; padding: 40px 0;">
     <span class="serif">Charles Alvarez Gamo</span>
     <span style="font-size: 13px; font-weight: 700; text-transform: uppercase;">© 2026 Professional Portfolio</span>
   </div>
