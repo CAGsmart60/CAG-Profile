@@ -23,7 +23,7 @@
       "addressLocality": "Metro Manila",
       "addressCountry": "PH"
     },
-    "description": "Over three decades of leadership in corporate finance, investment banking, and principal investing.",
+    "description": "Over three decades of leadership in corporate finance and principal investing.",
     "knowsAbout": ["Investor Relations", "Stakeholder Communications", "Capital Raising", "Corporate Strategy", "Fintech"]
   }
   </script>
@@ -33,7 +33,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   
   <style>
-    /* Universal Reset */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
@@ -48,10 +47,7 @@
       --text-lo:  #505e73; 
     }
 
-    html { 
-      scroll-behavior: smooth; 
-      scroll-padding-top: 90px; 
-    }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -60,193 +56,211 @@
       font-size: 16px;
       line-height: 1.8;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
     }
 
     .serif { font-family: 'Playfair Display', serif; }
     .bask  { font-family: 'Libre Baskerville', serif; }
 
-    /* ATS Optimization Container */
     .ats-only {
       position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
       overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
     }
 
-    /* ── RESPONSIVE NAVIGATION ── */
+    /* ── NAV ── */
     nav {
       position: sticky; top: 0; z-index: 1000;
-      background: rgba(238, 242, 246, 0.95); 
-      backdrop-filter: blur(10px);
+      background: rgba(238, 242, 246, 0.95); backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border);
-      padding: 0 5%;
-      height: 80px;
+      padding: 0 48px; height: 75px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .nav-id { font-size: 1.1rem; font-weight: 500; color: var(--text-hi); }
+    .nav-id { font-size: 18px; color: var(--text-hi); font-weight: 500; }
     .nav-id span { color: var(--accent); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
-      color: var(--text-lo); text-decoration: none;
-      font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
-      font-weight: 600; transition: color 0.3s ease;
+      color: var(--text-lo); text-decoration: none; font-size: 13px;
+      letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600;
     }
-    .nav-links a:hover { color: var(--accent); }
 
-    /* ── FLUID HERO SECTION ── */
-    .hero { padding: 80px 5%; border-bottom: 1px solid var(--border); }
+    /* ── HERO ── */
+    .hero { padding: 80px 48px; border-bottom: 1px solid var(--border); }
     .hero-inner {
       max-width: 1200px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 320px;
-      gap: 60px; align-items: center;
+      display: grid; grid-template-columns: 1fr 340px; gap: 64px; align-items: center;
     }
-    .hero-name {
-      font-size: clamp(2.2rem, 5vw, 3.8rem); 
-      line-height: 1.1; color: var(--text-hi); margin-bottom: 1.5rem;
-    }
-    .hero-name .accent-color { color: var(--accent); font-style: normal; }
+    .hero-name { font-size: clamp(32px, 5vw, 54px); line-height: 1.1; margin-bottom: 20px; }
     .hero-roles {
-      font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase;
-      color: var(--text-lo); margin-bottom: 2rem;
+      font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--text-lo); margin-bottom: 32px;
     }
     .hero-roles span { color: var(--accent); font-weight: 700; }
-    
-    .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-summary { font-size: 17px; color: var(--text-md); max-width: 650px; margin-bottom: 40px; }
+
+    .btn-group { display: flex; gap: 16px; flex-wrap: wrap; }
     .btn {
-      padding: 1rem 2rem; font-size: 0.8rem; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 0.1em;
-      text-decoration: none; transition: all 0.3s ease;
-      display: inline-block; text-align: center;
-      cursor: pointer;
+      padding: 14px 28px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+      font-weight: 600; text-decoration: none; transition: all 0.2s ease;
     }
-    .btn-primary { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
-    .btn-secondary { background: transparent; color: var(--text-md); border: 1px solid var(--border-em); }
-    .btn:hover { transform: translateY(-2px); opacity: 0.9; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-secondary { border: 1px solid var(--border-em); color: var(--text-md); }
 
-    /* ── METRICS ── */
-    .metrics-card {
-      background: var(--bg2); border: 1px solid var(--border-em);
-      padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem;
+    .metrics-panel { background: var(--bg2); padding: 32px; border: 1px solid var(--border-em); }
+    .metric { margin-bottom: 24px; }
+    .metric:last-child { margin-bottom: 0; }
+    .metric-val { font-size: 32px; color: var(--text-hi); line-height: 1; }
+    .metric-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-lo); margin-top: 8px; }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 48px; border-bottom: 1px solid var(--border); }
+    .inner { max-width: 1200px; margin: 0 auto; }
+    .sec-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--text-lo); font-weight: 700; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
     }
-    .metric-item h4 { font-size: 2rem; color: var(--text-hi); }
-    .metric-item p { font-size: 0.7rem; text-transform: uppercase; color: var(--text-lo); font-weight: 600; }
+    .sec-label::before { content: ''; width: 24px; height: 2px; background: var(--accent); }
+    .sec-h { font-size: clamp(28px, 4vw, 40px); margin-bottom: 60px; }
 
-    /* ── ADAPTIVE GRID ── */
-    section { padding: 100px 5%; border-bottom: 1px solid var(--border); }
-    .section-title { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 4rem; text-align: center; }
-    
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1px; background: var(--border);
+    /* ── GRID ── */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--border); }
+    .grid-item { background: var(--bg); padding: 48px; }
+    .grid-item.alt { background: var(--bg3); }
+    .item-title { font-size: 22px; margin-bottom: 16px; }
+    .item-body { font-size: 15px; color: var(--text-md); }
+
+    /* ── CAREER JOURNEY ── */
+    .career-row {
+      display: grid; grid-template-columns: 200px 1fr; gap: 40px;
+      padding: 32px 0; border-bottom: 1px solid var(--border);
     }
-    .grid-item { background: var(--bg); padding: 3rem; transition: background 0.3s ease; }
-    .grid-item:hover { background: #f8fafc; }
-    .grid-item.highlight { background: var(--bg3); }
-    
-    .item-label { font-size: 0.7rem; color: var(--accent); font-weight: 700; margin-bottom: 1rem; display: block; }
-    .item-title { font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-hi); }
+    .career-year { font-weight: 600; color: var(--accent); font-size: 14px; }
+    .career-role { font-weight: 700; font-size: 18px; margin-bottom: 4px; }
+    .career-company { font-family: 'Playfair Display', serif; font-style: italic; color: var(--text-lo); }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 968px) {
-      .hero-inner { grid-template-columns: 1fr; text-align: center; }
-      .cta-group { justify-content: center; }
-      .metrics-card { display: none; } 
-      nav .nav-links { display: none; }
-    }
-
-    @media (max-width: 480px) {
-      section { padding: 60px 5%; }
-      .grid-item { padding: 2rem; }
+    @media (max-width: 900px) {
+      .hero-inner, .career-row { grid-template-columns: 1fr; gap: 24px; }
+      nav .nav-links, .metrics-panel { display: none; }
+      section, .hero { padding: 60px 24px; }
     }
   </style>
 </head>
 <body>
 
-<!-- ATS-OPTIMIZED PLAIN TEXT VERSION -->
 <div class="ats-only">
   <h1>Charles Alvarez Gamo</h1>
-  <p>Senior Financial Adviser, Principal Investor, and Corporate Strategist based in Metro Manila.</p>
+  <p>Senior Financial Adviser and Corporate Strategist based in Metro Manila.</p>
   <p>Charles Alvarez Gamo has spent over 30 years at the intersection of capital allocation and stakeholder relations. By managing a diverse range of capital transactions, he has served as a strategic pillar for boards across the Philippines’ most vital industries—providing the high-level governance and stakeholder alignment necessary for senior leadership to achieve sustained growth.</p>
-  <p>Expertise: Investor Relations, Stakeholder Communications, Capital Raising, Risk Management, Corporate Strategy.</p>
 </div>
 
 <nav>
   <div class="nav-id serif">Charles Alvarez <span class="accent-color">Gamo</span></div>
   <ul class="nav-links">
     <li><a href="#about">Profile</a></li>
-    <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#career">Career</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<header class="hero">
+<header class="hero" id="about">
   <div class="hero-inner">
-    <div class="hero-content">
+    <div>
+      <p class="sec-label">Professional Profile</p>
       <h1 class="hero-name serif">Charles Alvarez <span class="accent-color">Gamo</span></h1>
       <p class="hero-roles">
         Capital Adviser &amp; Strategist &nbsp;·&nbsp; <span>Investor Relations</span><br>
         Governance &amp; Executive Coaching
       </p>
-      <p class="bask" style="max-width: 600px; margin-bottom: 2.5rem; color: var(--text-md);">
+      <p class="hero-summary bask">
         Charles Alvarez Gamo has spent over 30 years at the intersection of capital allocation and stakeholder relations. By managing a diverse range of capital transactions, he has served as a strategic pillar for boards across the Philippines’ most vital industries—providing the high-level governance and stakeholder alignment necessary for senior leadership to achieve sustained growth.
       </p>
-      <div class="cta-group">
+      <div class="btn-group">
         <a href="mailto:charles.gamo@gmail.com" class="btn btn-primary">Engage Charles</a>
-        <a href="#capabilities" class="btn btn-secondary">View Expertise</a>
+        <a href="#expertise" class="btn btn-secondary">View Expertise</a>
       </div>
     </div>
-    <div class="metrics-card">
-      <div class="metric-item">
-        <h4 class="serif">30+ Years</h4>
-        <p>Expertise at the Intersection of Capital &amp; Strategy</p>
+    <div class="metrics-panel">
+      <div class="metric">
+        <div class="metric-val serif">30+</div>
+        <div class="metric-label">Years of Strategic Leadership</div>
       </div>
-      <div class="metric-item">
-        <h4 class="serif">Board Partner</h4>
-        <p>Strategic Advisor &amp; Executive Coach</p>
+      <div class="metric">
+        <div class="metric-val serif">Board</div>
+        <div class="metric-label">Level Advisory &amp; GRC</div>
       </div>
     </div>
   </div>
 </header>
 
-<section id="capabilities">
+<section id="expertise">
   <div class="inner">
-    <h2 class="section-title serif">Core <em>Capabilities</em></h2>
+    <p class="sec-label">Core Capabilities</p>
+    <h2 class="sec-h serif">Expertise <em>Highlights</em></h2>
     <div class="grid">
       <div class="grid-item">
-        <span class="item-label">01 · Finance</span>
         <h3 class="item-title serif">Capital Raising &amp; Advisory</h3>
-        <p>Structuring and execution of public and private debt and equity transactions.</p>
+        <p class="item-body">Structuring and execution of public and private debt and equity transactions across growth sectors.</p>
       </div>
-      <div class="grid-item highlight">
-        <span class="item-label">02 · Stakeholder Relations</span>
+      <div class="grid-item alt">
         <h3 class="item-title serif">Investor Relations &amp; Stakeholder Communications</h3>
-        <p>Cultivating institutional trust and strategic market positioning for growth sectors.</p>
+        <p class="item-body">Cultivating institutional trust and strategic market positioning for high-stakes stakeholder environments.</p>
       </div>
-      <div class="grid-item highlight">
-        <span class="item-label">03 · Investing</span>
+      <div class="grid-item alt">
         <h3 class="item-title serif">Principal Investing</h3>
-        <p>Direct investment screening and underwriting across digital infrastructure and healthcare.</p>
+        <p class="item-body">Direct investment screening and underwriting across digital infrastructure, property, and healthcare.</p>
       </div>
       <div class="grid-item">
-        <span class="item-label">04 · Risk</span>
         <h3 class="item-title serif">GRC &amp; Governance</h3>
-        <p>Board-level advisory on integrated risk management and ESG disclosure standards.</p>
+        <p class="item-body">Board-level advisory on integrated risk management and ESG disclosure standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="career">
+  <div class="inner">
+    <p class="sec-label">Professional Timeline</p>
+    <h2 class="sec-h serif">Career <em>Journey</em></h2>
+    
+    <div class="career-row">
+      <div class="career-year">2020 — Present</div>
+      <div>
+        <div class="career-role">Principal Investor &amp; Senior Financial Adviser</div>
+        <div class="career-company">Strategic Mandates</div>
+      </div>
+    </div>
+
+    <div class="career-row">
+      <div class="career-year">2010 — 2019</div>
+      <div>
+        <div class="career-role">Head of Investor Relations &amp; Corporate Strategy</div>
+        <div class="career-company">Energy &amp; Infrastructure Sector</div>
+      </div>
+    </div>
+
+    <div class="career-row">
+      <div class="career-year">1995 — 2009</div>
+      <div>
+        <div class="career-role">Director, Investment Banking</div>
+        <div class="career-company">Capital Markets &amp; Advisory</div>
       </div>
     </div>
   </div>
 </section>
 
 <section id="contact" style="background: var(--bg2); text-align: center;">
-  <h2 class="serif" style="margin-bottom: 2rem;">Collaborate on <em>Strategic Mandates</em></h2>
-  <div class="cta-group" style="justify-content: center;">
-    <a href="mailto:charles.gamo@gmail.com" class="btn btn-primary">Email Directly</a>
-    <a href="https://www.linkedin.com/in/charlesgamo" target="_blank" class="btn btn-secondary">LinkedIn Profile</a>
+  <div class="inner">
+    <h2 class="serif" style="margin-bottom: 32px;">Collaborate on <em>Strategic Mandates</em></h2>
+    <div class="btn-group" style="justify-content: center;">
+      <a href="mailto:charles.gamo@gmail.com" class="btn btn-primary">Email Directly</a>
+      <a href="https://www.linkedin.com/in/charlesgamo" target="_blank" class="btn btn-secondary">LinkedIn Profile</a>
+    </div>
   </div>
 </section>
 
-<footer style="padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 0.7rem; text-transform: uppercase; color: var(--text-lo); border-top: 1px solid var(--border);">
-  <p class="serif" style="text-transform: none; font-size: 0.9rem;">Charles Alvarez Gamo</p>
-  <p>© 2026 · Metro Manila, PH</p>
+<footer style="padding: 48px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
+  <div class="serif" style="font-size: 18px;">Charles Alvarez Gamo</div>
+  <div style="font-size: 11px; text-transform: uppercase; color: var(--text-lo); letter-spacing: 0.1em;">© 2026 · Metro Manila, PH</div>
 </footer>
 
 </body>
