@@ -10,7 +10,6 @@
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-  /* Reversed Palette: Light Slate Backgrounds with Darker Content */
   :root {
     --bg:      #eef2f6; 
     --bg2:     #e2e8f0; 
@@ -21,7 +20,7 @@
     --accent2:     #162035; 
     --text-hi:  #0d1520; 
     --text-md:  #334155; 
-    --text-lo:  #505e73; /* Slightly darker for better readability */
+    --text-lo:  #505e73; 
     --slate:    #cbd5e1;
   }
 
@@ -29,10 +28,10 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    font-weight: 400; /* Increased from 300 for readability */
+    font-weight: 400;
     background: var(--bg);
     color: var(--text-hi);
-    font-size: 16px; /* Increased from 15px */
+    font-size: 16px;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
   }
@@ -47,7 +46,7 @@
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     padding: 0 48px;
-    height: 70px; /* Slightly taller */
+    height: 70px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .nav-id {
@@ -59,7 +58,7 @@
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a {
     color: var(--text-lo); text-decoration: none;
-    font-size: 13px; /* Increased from 11px */
+    font-size: 13px;
     letter-spacing: 0.1em; text-transform: uppercase;
     font-weight: 500;
     transition: color 0.2s;
@@ -78,7 +77,7 @@
     gap: 72px; align-items: start;
   }
   .hero-kicker {
-    font-size: 13px; /* Increased from 11px */
+    font-size: 13px;
     letter-spacing: 0.15em; text-transform: uppercase;
     font-weight: 600;
     color: var(--text-lo); margin-bottom: 20px;
@@ -90,13 +89,14 @@
   }
   .hero-name {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(40px, 4.5vw, 68px); font-weight: 400;
-    line-height: 1.06; color: var(--text-hi);
-    margin-bottom: 24px; letter-spacing: -0.02em;
+    font-size: clamp(32px, 4vw, 58px); font-weight: 400;
+    line-height: 1.1; color: var(--text-hi);
+    margin-bottom: 24px; letter-spacing: -0.01em;
+    white-space: nowrap; 
   }
   .hero-name em { font-style: italic; color: var(--accent); }
   .hero-roles {
-    font-size: 14px; /* Increased from 12px */
+    font-size: 14px;
     letter-spacing: 0.05em; text-transform: uppercase;
     color: var(--text-lo); line-height: 2.2; margin-bottom: 32px;
     font-weight: 500;
@@ -266,26 +266,6 @@
   }
   .board-body { font-size: 14.5px; color: var(--text-md); line-height: 1.8; font-weight: 400; }
 
-  /* ── EDUCATION ── */
-  #education { background: var(--bg2); }
-  .edu-rows { border-top: 1px solid var(--border); }
-  .edu-row {
-    display: grid; grid-template-columns: 140px 1fr;
-    gap: 32px; padding: 28px 0;
-    border-bottom: 1px solid var(--border);
-    align-items: baseline;
-  }
-  .edu-yr {
-    font-size: 13px; letter-spacing: 0.05em;
-    color: var(--accent); text-transform: uppercase; font-weight: 600;
-  }
-  .edu-deg {
-    font-family: 'Playfair Display', serif;
-    font-size: 19px; font-weight: 400;
-    color: var(--text-hi); line-height: 1.25; margin-bottom: 4px;
-  }
-  .edu-inst { font-size: 14px; color: var(--text-lo); font-weight: 400; }
-
   /* ── CONTACT ── */
   #contact { background: var(--bg); border-bottom: none; }
   .contact-body {
@@ -324,9 +304,9 @@
     .hero-inner, .about-grid, .exp-grid, .board-grid {
       grid-template-columns: 1fr; gap: 48px;
     }
+    .hero-name { white-space: normal; } 
     .cap-grid { grid-template-columns: 1fr 1fr; }
     nav .nav-links { display: none; }
-    .edu-row { grid-template-columns: 1fr; gap: 8px; }
     .metrics-panel { display: none; }
   }
 </style>
@@ -348,7 +328,7 @@
   <div class="hero-inner">
     <div>
       <p class="hero-kicker">Senior Financial Adviser · Metro Manila</p>
-      <h1 class="hero-name serif">Charles Alvarez<br><em>Gamo</em></h1>
+      <h1 class="hero-name serif">Charles Alvarez <em>Gamo</em></h1>
       <p class="hero-roles">
         Capital Adviser &amp; Arranger &nbsp;·&nbsp; Corporate Strategist<br>
         <span>Principal Investing &amp; Portfolio Oversight</span><br>
@@ -391,7 +371,7 @@
 <section id="about">
   <div class="inner">
     <p class="sec-label">Professional Profile</p>
-    <h2 class="sec-h serif">Capital markets practitioner.<br><em>Investment decision-maker.</em></h2>
+    <h2 class="sec-h serif" style="white-space: nowrap;">Charles Alvarez Gamo</h2>
     <div class="about-grid">
       <div class="about-copy">
         <p>Charles Alvarez Gamo has spent over three decades at the intersection of capital allocation, strategic advisory, and governance — originating and executing transactions, evaluating and managing investments, and advising boards and executives across the Philippines' most demanding industries.</p>
@@ -446,7 +426,7 @@
   <div class="inner">
     <p class="sec-label">Get in Touch</p>
     <h2 class="sec-h serif">Available for <em>select</em> mandates</h2>
-    <p class="contact-body bask">Charles is available on a selective basis for senior roles in private equity, independent director roles, and strategic advisory mandates.</p>
+    <p class="contact-body bask">Charles is available on a selective basis for senior roles in corporate strategy and financial advisory mandates, and for independent director roles.</p>
     <div class="contact-row">
       <a href="mailto:charles.gamo@gmail.com" class="c-link">charles.gamo@gmail.com</a>
       <a href="https://www.linkedin.com/in/charlesgamo" class="c-link" target="_blank">linkedin.com/in/charlesgamo</a>
