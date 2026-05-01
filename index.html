@@ -29,7 +29,7 @@
     font-weight: 400;
     background: var(--bg);
     color: var(--text-hi);
-    font-size: 18px; 
+    font-size: 16px;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
   }
@@ -43,140 +43,167 @@
     background: rgba(238, 242, 246, 0.97); 
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
-    padding: 0 5%;
-    height: 80px;
+    padding: 0 48px;
+    height: 70px;
     display: flex; align-items: center; justify-content: space-between;
   }
   .nav-id {
     font-family: 'Playfair Display', serif;
-    font-size: 20px; font-weight: 500;
+    font-size: 18px; font-weight: 400;
     color: var(--text-hi); letter-spacing: 0.02em;
   }
-  .nav-id span { color: var(--accent); }
+  .nav-id span { color: var(--accent); font-style: italic; }
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a {
     color: var(--text-lo); text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.1em; text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
     transition: color 0.2s;
   }
+  .nav-links a:hover { color: var(--accent); }
 
   /* ── HERO ── */
   .hero {
     background: var(--bg);
-    padding: 100px 5% 80px;
+    padding: 88px 48px 72px;
     border-bottom: 1px solid var(--border);
   }
   .hero-inner {
     max-width: 1200px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 380px;
-    gap: 80px; align-items: start;
+    display: grid; grid-template-columns: 1fr 360px;
+    gap: 72px; align-items: start;
   }
   .hero-kicker {
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.15em; text-transform: uppercase;
-    font-weight: 700;
-    color: var(--text-lo); margin-bottom: 24px;
+    font-weight: 600;
+    color: var(--text-lo); margin-bottom: 20px;
     display: flex; align-items: center; gap: 12px;
   }
   .hero-kicker::before {
-    content: ''; display: inline-block; width: 40px; height: 2px; background: var(--accent);
+    content: ''; display: inline-block; width: 32px; height: 2px; background: var(--accent);
   }
   .hero-name {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(36px, 5vw, 64px); font-weight: 400;
+    font-size: clamp(32px, 4vw, 58px); font-weight: 400;
     line-height: 1.1; color: var(--text-hi);
-    margin-bottom: 28px; letter-spacing: -0.01em;
+    margin-bottom: 24px; letter-spacing: -0.01em;
     white-space: nowrap; 
   }
+  .hero-name em { font-style: italic; color: var(--accent); }
   .hero-roles {
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.05em; text-transform: uppercase;
-    color: var(--text-lo); line-height: 1.8; margin-bottom: 40px;
-    font-weight: 600;
+    color: var(--text-lo); line-height: 2.2; margin-bottom: 32px;
+    font-weight: 500;
   }
-  .hero-roles span { color: var(--accent); }
+  .hero-roles span { color: var(--accent); font-weight: 600; }
   .hero-summary {
     font-family: 'Libre Baskerville', serif;
-    font-size: 18px; line-height: 1.9;
-    color: var(--text-md); max-width: 600px; margin-bottom: 48px;
+    font-size: 16px; line-height: 1.9;
+    color: var(--text-md); max-width: 520px; margin-bottom: 40px;
   }
-  .cta-row { display: flex; gap: 20px; flex-wrap: wrap; }
-  
+  .cta-row { display: flex; gap: 16px; }
+  .btn-a {
+    background: var(--accent); color: var(--bg);
+    padding: 14px 32px; font-size: 13px; letter-spacing: 0.1em;
+    text-transform: uppercase; font-weight: 600;
+    text-decoration: none; border: 1px solid var(--accent);
+    display: inline-block; cursor: pointer; transition: opacity 0.2s;
+  }
+  .btn-a:hover { opacity: 0.9; }
+  .btn-b {
+    background: transparent; color: var(--text-md);
+    padding: 14px 32px; font-size: 13px; letter-spacing: 0.1em;
+    text-transform: uppercase; font-weight: 500;
+    text-decoration: none; border: 1px solid var(--border-em);
+    display: inline-block; cursor: pointer; transition: all 0.2s;
+  }
+  .btn-b:hover { border-color: var(--accent); color: var(--accent); }
+
   /* ── METRICS PANEL ── */
   .metrics-panel {
     border: 1px solid var(--border-em);
     background: var(--bg2);
   }
   .metric-row {
-    padding: 28px 32px;
+    padding: 24px 28px;
     border-bottom: 1px solid var(--border);
   }
   .metric-row:last-child { border-bottom: none; }
   .metric-val {
     font-family: 'Playfair Display', serif;
-    font-size: 40px; color: var(--text-hi); line-height: 1; margin-bottom: 10px;
+    font-size: 36px; color: var(--text-hi); line-height: 1; margin-bottom: 8px;
   }
+  .metric-val em { font-style: italic; color: var(--accent); }
   .metric-desc {
-    font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase;
-    color: var(--text-lo); line-height: 1.6; font-weight: 700;
+    font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--text-lo); line-height: 1.6; font-weight: 500;
   }
 
   /* ── SECTIONS ── */
-  section { padding: 100px 5%; border-bottom: 1px solid var(--border); }
+  section { padding: 100px 48px; border-bottom: 1px solid var(--border); }
   .inner { max-width: 1200px; margin: 0 auto; }
   .sec-label {
-    font-size: 14px; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--text-lo); font-weight: 700;
-    display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+    font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--text-lo); font-weight: 600;
+    display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
   }
-  .sec-label::before { content: ''; width: 30px; height: 2px; background: var(--accent); }
+  .sec-label::before { content: ''; width: 24px; height: 2px; background: var(--accent); }
   .sec-h {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 4vw, 48px); font-weight: 400;
-    color: var(--text-hi); line-height: 1.2; margin-bottom: 64px;
+    font-size: clamp(32px, 4vw, 44px); font-weight: 400;
+    color: var(--text-hi); line-height: 1.1; margin-bottom: 56px;
   }
+  .sec-h em { font-style: italic; color: var(--accent); }
 
   /* ── ABOUT ── */
-  .about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; }
-  .about-copy p { font-family: 'Libre Baskerville', serif; font-size: 17px; margin-bottom: 24px; }
-  .creds { list-style: none; margin-top: 40px; border-top: 1px solid var(--border); }
+  #about { background: var(--bg); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
+  .about-copy p { font-family: 'Libre Baskerville', serif; font-size: 15px; line-height: 2; color: var(--text-md); margin-bottom: 22px; }
+  .creds { list-style: none; margin-top: 32px; border-top: 1px solid var(--border); }
   .creds li {
-    font-size: 16px; color: var(--text-md); padding: 16px 0;
-    border-bottom: 1px solid var(--border); font-weight: 500;
+    font-size: 14px; color: var(--text-lo); padding: 14px 0; border-bottom: 1px solid var(--border);
     display: flex; align-items: center; gap: 12px;
   }
-  .creds li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .creds li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+  .highlights { display: flex; flex-direction: column; gap: 1px; }
+  .hl-card { background: var(--bg3); padding: 28px 32px; border-left: 3px solid var(--accent); }
+  .hl-num { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--text-hi); line-height: 1; margin-bottom: 8px; }
+  .hl-num em { font-style: italic; color: var(--accent); }
+  .hl-text { font-size: 14px; color: var(--text-lo); line-height: 1.7; }
 
-  /* ── CAPABILITIES (Restored Original Look) ── */
+  /* ── CAPABILITIES ── */
   #capabilities { background: var(--bg2); }
   .cap-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 0; background: var(--border);
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: var(--border);
   }
-  .cap-card { background: #f0f4f8; padding: 64px 48px; height: 100%; border-right: 1px solid var(--border); }
-  .cap-card:last-child { border-right: none; }
-  .cap-card.featured { background: #d9e2ec; }
-  .cap-num { font-size: 13px; font-weight: 700; color: #334e68; margin-bottom: 24px; display: block; text-transform: uppercase; letter-spacing: 0.1em; }
-  .cap-title { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 20px; color: #102a43; }
-  .cap-body { font-size: 16px; color: #334e68; font-weight: 400; line-height: 1.7; }
+  .cap-card { background: var(--bg); padding: 40px 24px; display: flex; flex-direction: column; }
+  .cap-card.featured { background: var(--bg3); }
+  .cap-num { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; display: block; font-weight: 600; }
+  .cap-title { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--text-hi); margin-bottom: 12px; line-height: 1.25; }
+  .cap-body { font-size: 14px; color: var(--text-md); line-height: 1.7; }
 
-  /* ── CONTACT ── */
-  .contact-body { font-family: 'Libre Baskerville', serif; font-size: 18px; max-width: 800px; margin-bottom: 50px; }
-  .c-link { font-size: 17px; font-weight: 600; color: var(--accent); text-decoration: none; border-bottom: 2px solid var(--border-em); padding-bottom: 4px; }
+  /* ── CONTACT & FOOTER ── */
+  #contact { background: var(--bg); border-bottom: none; }
+  .contact-body { font-family: 'Libre Baskerville', serif; font-size: 16px; color: var(--text-md); max-width: 600px; margin-bottom: 48px; }
+  .contact-row { display: flex; gap: 40px; flex-wrap: wrap; }
+  .c-link { font-size: 15px; color: var(--accent); text-decoration: none; border-bottom: 2px solid var(--border-em); padding-bottom: 4px; font-weight: 500; transition: all 0.2s; }
+  .c-link:hover { border-color: var(--text-hi); color: var(--text-hi); }
+  
+  footer { background: var(--bg2); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); }
+  .foot-name { font-family: 'Playfair Display', serif; font-size: 15px; color: var(--text-lo); }
+  .foot-note { font-size: 12px; color: var(--text-lo); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; }
 
-  /* ── BUTTONS ── */
-  .btn-a { background: var(--accent); color: white; padding: 16px 36px; font-size: 14px; font-weight: 700; text-transform: uppercase; text-decoration: none; display: inline-block; }
-  .btn-b { background: transparent; border: 1px solid var(--border-em); padding: 16px 36px; font-size: 14px; font-weight: 700; text-transform: uppercase; text-decoration: none; color: var(--text-md); display: inline-block; }
-
-  /* ── RESPONSIVE ── */
   @media (max-width: 1024px) {
-    .hero-inner, .about-grid { grid-template-columns: 1fr; gap: 60px; }
+    .cap-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 900px) {
+    .hero-inner, .about-grid, .cap-grid { grid-template-columns: 1fr; }
     .hero-name { white-space: normal; }
-    .metrics-panel { display: grid; grid-template-columns: 1fr 1fr; }
-    .cap-grid { grid-template-columns: 1fr; }
-    .cap-card { border-right: none; border-bottom: 1px solid var(--border); }
+    .metrics-panel { display: none; }
   }
 </style>
 </head>
@@ -195,14 +222,14 @@
   <div class="hero-inner">
     <div>
       <p class="hero-kicker">Senior Financial Adviser · Metro Manila</p>
-      <h1 class="hero-name serif">Charles Alvarez Gamo</h1>
+      <h1 class="hero-name serif">Charles Alvarez <em>Gamo</em></h1>
       <p class="hero-roles">
         Capital Adviser &amp; Arranger &nbsp;·&nbsp; Corporate Strategist<br>
         <span>Stakeholder Relations &amp; Portfolio Oversight</span><br>
         Governance, Risk &amp; Compliance &nbsp;·&nbsp; Certified Executive Coach
       </p>
       <p class="hero-summary bask">
-        Over three decades of leadership across corporate finance, investment banking, and principal investing — deploying and advising capital across energy, financial services, property, healthcare, and technology sectors in the Philippines and beyond.
+        Over three decades of leadership across corporate finance, investment banking, and principal investing — deploying and advising capital across energy, financial services, property, healthcare, and technology sectors in the Philippines and beyond.[cite: 2]
       </p>
       <div class="cta-row">
         <a href="#contact" class="btn-a">Engage Charles</a>
@@ -212,16 +239,16 @@
 
     <div class="metrics-panel">
       <div class="metric-row">
-        <div class="metric-val serif">&#8369;26.5B</div>
-        <div class="metric-desc">Capital deployed — debt &amp; equity transactions</div>
+        <div class="metric-val serif">&#8369;26.5<em>B</em></div>
+        <div class="metric-desc">Capital deployed — debt &amp; equity transactions[cite: 2]</div>
       </div>
       <div class="metric-row">
-        <div class="metric-val serif">USD 1.5B</div>
-        <div class="metric-desc">GOCC debt refinancing structured &amp; arranged</div>
+        <div class="metric-val serif">USD 1.5<em>B</em></div>
+        <div class="metric-desc">GOCC debt refinancing structured &amp; arranged[cite: 2]</div>
       </div>
       <div class="metric-row">
-        <div class="metric-val serif">35+</div>
-        <div class="metric-desc">Years across capital markets, investing &amp; governance</div>
+        <div class="metric-val serif">35<em>+</em></div>
+        <div class="metric-desc">Years across capital markets, investing &amp; governance[cite: 2]</div>
       </div>
     </div>
   </div>
@@ -230,25 +257,27 @@
 <section id="about">
   <div class="inner">
     <p class="sec-label">Professional Profile</p>
-    <h2 class="sec-h serif">Strategic Advisor &amp; Principal Investor</h2>
+    <h2 class="sec-h serif">Charles Alvarez <em>Gamo</em></h2>
     <div class="about-grid">
       <div class="about-copy">
-        <p>Charles Alvarez Gamo has spent over three decades at the intersection of capital allocation, strategic advisory, and governance — originating and executing transactions, evaluating and managing investments, and advising boards and executives across the Philippines' most demanding industries.</p>
-        <p>His experience spans both sides of the capital table: as a banker originating and structuring transactions for issuers, and as a principal screening, underwriting, and overseeing direct investments across growth-stage and established businesses.</p>
-        
+        <p>Charles Alvarez Gamo has spent over three decades at the intersection of capital allocation, strategic advisory, and governance — originating and executing transactions, evaluating and managing investments, and advising boards and executives across the Philippines' most demanding industries.[cite: 2]</p>
+        <p>His experience spans both sides of the capital table: as a banker originating and structuring transactions for issuers, and as a principal screening, underwriting, and overseeing direct investments across growth-stage and established businesses.[cite: 2]</p>
         <ul class="creds">
-          <li>Certified Management Accountant — ICMA Australia</li>
-          <li>Certified Risk Analyst</li>
-          <li>Certified Executive Coach</li>
-          <li>Oxford Fintech Programme</li>
-          <li>MSc Finance, London Business School</li>
+          <li>Certified Management Accountant — ICMA Australia[cite: 2]</li>
+          <li>Certified Risk Analyst[cite: 2]</li>
+          <li>Certified Executive Coach[cite: 2]</li>
+          <li>Oxford Fintech Programme[cite: 2]</li>
+          <li>MSc Finance, London Business School[cite: 2]</li>
         </ul>
       </div>
       <div class="highlights">
-        <div class="cap-card featured" style="padding: 40px; border: none;">
-          <span class="cap-num">Impact Highlight</span>
-          <h3 class="cap-title serif">Institutional Stewardship</h3>
-          <p class="cap-body">Expertise in bridging the gap between complex corporate strategies and institutional investor expectations, ensuring transparency and long-term value alignment.</p>
+        <div class="hl-card">
+          <div class="hl-num serif">&#8369;26.5<em>B</em></div>
+          <div class="hl-text">Capital deployed across debt and equity mandates at China Bank Capital[cite: 2]</div>
+        </div>
+        <div class="hl-card">
+          <div class="hl-num serif">USD 4<em>M</em></div>
+          <div class="hl-text">Equity raise structured and executed for a Philippine IoT startup[cite: 2]</div>
         </div>
       </div>
     </div>
@@ -263,17 +292,22 @@
       <div class="cap-card">
         <span class="cap-num">01 · Finance</span>
         <h3 class="cap-title serif">Capital Raising &amp; Deal Advisory</h3>
-        <p class="cap-body">Origination, structuring, and execution of public and private debt and equity transactions.</p>
+        <p class="cap-body">Origination, structuring, and execution of public and private debt and equity transactions.[cite: 2]</p>
       </div>
       <div class="cap-card featured">
-        <span class="cap-num">02 · Investing</span>
-        <h3 class="cap-title serif">Principal Investing</h3>
-        <p class="cap-body">Direct investment screening, thesis development, and deal underwriting across growth-stage companies.</p>
+        <span class="cap-num">02 · Stakeholder Relations</span>
+        <h3 class="cap-title serif">Investor Relations &amp; Stakeholder Communications</h3>
+        <p class="cap-body">Strategic engagement with institutional investors, analysts, and regulatory bodies to ensure market alignment.</p>
       </div>
       <div class="cap-card">
-        <span class="cap-num">03 · Governance</span>
+        <span class="cap-num">03 · Investing</span>
+        <h3 class="cap-title serif">Principal Investing</h3>
+        <p class="cap-body">Direct investment screening, thesis development, and deal underwriting across growth-stage companies.[cite: 2]</p>
+      </div>
+      <div class="cap-card featured">
+        <span class="cap-num">04 · Governance</span>
         <h3 class="cap-title serif">GRC &amp; Board Engagement</h3>
-        <p class="cap-body">Integrated risk management, corporate governance advisory, and ESG disclosure standards.</p>
+        <p class="cap-body">Integrated risk management, corporate governance advisory, and ESG disclosure standards.[cite: 2]</p>
       </div>
     </div>
   </div>
@@ -283,19 +317,18 @@
   <div class="inner">
     <p class="sec-label">Get in Touch</p>
     <h2 class="sec-h serif">Available for <em>Selective</em> Mandates</h2>
-    <p class="contact-body bask">
-      Charles is available on a selective basis for corporate strategy, financial advisory, capital-raising, and M&amp;A mandates and roles, and to serve as an independent Board director.
-    </p>
-    <div class="cta-row">
+    <p class="contact-body bask">Charles is available on a selective basis for corporate strategy, financial advisory, and M&amp;A mandates, and for independent director roles.[cite: 2]</p>
+    <div class="contact-row">
       <a href="mailto:charles.gamo@gmail.com" class="c-link">charles.gamo@gmail.com</a>
       <a href="https://www.linkedin.com/in/charlesgamo" class="c-link" target="_blank">linkedin.com/in/charlesgamo</a>
+      <a href="tel:+639178870057" class="c-link">+63 917 887 0057</a>
     </div>
   </div>
 </section>
 
-<footer style="padding: 40px 5%; background: var(--bg2); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-  <div class="serif" style="font-size: 18px;">Charles Alvarez Gamo</div>
-  <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; color: var(--text-lo);">Senior Financial Adviser · Metro Manila, PH</div>
+<footer>
+  <div class="foot-name serif">Charles Alvarez Gamo &nbsp;—&nbsp; Metro Manila, Philippines</div>
+  <div class="foot-note">Senior Financial Adviser · Principal Investor · Corporate Strategist</div>
 </footer>
 
 </body>
