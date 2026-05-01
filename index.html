@@ -149,17 +149,18 @@
   }
   .creds li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 
-  /* ── CAPABILITIES ── */
+  /* ── CAPABILITIES (Restored Original Look) ── */
   #capabilities { background: var(--bg2); }
   .cap-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1px; background: var(--border);
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 0; background: var(--border);
   }
-  .cap-card { background: var(--bg); padding: 48px 40px; height: 100%; }
-  .cap-card.featured { background: var(--bg3); }
-  .cap-num { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 20px; display: block; text-transform: uppercase; }
-  .cap-title { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 16px; }
-  .cap-body { font-size: 16px; color: var(--text-md); font-weight: 400; }
+  .cap-card { background: #f0f4f8; padding: 64px 48px; height: 100%; border-right: 1px solid var(--border); }
+  .cap-card:last-child { border-right: none; }
+  .cap-card.featured { background: #d9e2ec; }
+  .cap-num { font-size: 13px; font-weight: 700; color: #334e68; margin-bottom: 24px; display: block; text-transform: uppercase; letter-spacing: 0.1em; }
+  .cap-title { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 20px; color: #102a43; }
+  .cap-body { font-size: 16px; color: #334e68; font-weight: 400; line-height: 1.7; }
 
   /* ── CONTACT ── */
   .contact-body { font-family: 'Libre Baskerville', serif; font-size: 18px; max-width: 800px; margin-bottom: 50px; }
@@ -174,13 +175,8 @@
     .hero-inner, .about-grid { grid-template-columns: 1fr; gap: 60px; }
     .hero-name { white-space: normal; }
     .metrics-panel { display: grid; grid-template-columns: 1fr 1fr; }
-    .metric-row:nth-child(even) { border-left: 1px solid var(--border); }
-  }
-  @media (max-width: 600px) {
-    .metrics-panel { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
-    .cta-row { flex-direction: column; }
-    .btn-a, .btn-b { text-align: center; }
+    .cap-grid { grid-template-columns: 1fr; }
+    .cap-card { border-right: none; border-bottom: 1px solid var(--border); }
   }
 </style>
 </head>
@@ -206,7 +202,7 @@
         Governance, Risk &amp; Compliance &nbsp;·&nbsp; Certified Executive Coach
       </p>
       <p class="hero-summary bask">
-        Over three decades of leadership across corporate finance, investment banking, and principal investing — deploying and advising capital across energy, financial services, property, healthcare, and technology sectors in the Philippines and beyond.[cite: 1]
+        Over three decades of leadership across corporate finance, investment banking, and principal investing — deploying and advising capital across energy, financial services, property, healthcare, and technology sectors in the Philippines and beyond.
       </p>
       <div class="cta-row">
         <a href="#contact" class="btn-a">Engage Charles</a>
@@ -237,8 +233,8 @@
     <h2 class="sec-h serif">Strategic Advisor &amp; Principal Investor</h2>
     <div class="about-grid">
       <div class="about-copy">
-        <p>Charles Alvarez Gamo has spent over three decades at the intersection of capital allocation, strategic advisory, and governance — originating and executing transactions, evaluating and managing investments, and advising boards and executives across the Philippines' most demanding industries.[cite: 1]</p>
-        <p>His experience spans both sides of the capital table: as a banker originating and structuring transactions for issuers, and as a principal screening, underwriting, and overseeing direct investments across growth-stage and established businesses.[cite: 1]</p>
+        <p>Charles Alvarez Gamo has spent over three decades at the intersection of capital allocation, strategic advisory, and governance — originating and executing transactions, evaluating and managing investments, and advising boards and executives across the Philippines' most demanding industries.</p>
+        <p>His experience spans both sides of the capital table: as a banker originating and structuring transactions for issuers, and as a principal screening, underwriting, and overseeing direct investments across growth-stage and established businesses.</p>
         
         <ul class="creds">
           <li>Certified Management Accountant — ICMA Australia</li>
@@ -249,10 +245,10 @@
         </ul>
       </div>
       <div class="highlights">
-        <div class="cap-card featured">
+        <div class="cap-card featured" style="padding: 40px; border: none;">
           <span class="cap-num">Impact Highlight</span>
           <h3 class="cap-title serif">Institutional Stewardship</h3>
-          <p class="cap-body">Expertise in bridging the gap between complex corporate strategies and institutional investor expectations, ensuring transparency and long-term value alignment.[cite: 1]</p>
+          <p class="cap-body">Expertise in bridging the gap between complex corporate strategies and institutional investor expectations, ensuring transparency and long-term value alignment.</p>
         </div>
       </div>
     </div>
@@ -267,17 +263,17 @@
       <div class="cap-card">
         <span class="cap-num">01 · Finance</span>
         <h3 class="cap-title serif">Capital Raising &amp; Deal Advisory</h3>
-        <p class="cap-body">Origination, structuring, and execution of public and private debt and equity transactions for market leaders.[cite: 1]</p>
+        <p class="cap-body">Origination, structuring, and execution of public and private debt and equity transactions.</p>
       </div>
       <div class="cap-card featured">
-        <span class="cap-num">02 · Stakeholder Relations</span>
-        <h3 class="cap-title serif">Investor Relations &amp; Stakeholder Communications</h3>
-        <p class="cap-body">Managing high-stakes communications and investor briefings to build institutional trust and secure long-term capital support.[cite: 1]</p>
+        <span class="cap-num">02 · Investing</span>
+        <h3 class="cap-title serif">Principal Investing</h3>
+        <p class="cap-body">Direct investment screening, thesis development, and deal underwriting across growth-stage companies.</p>
       </div>
       <div class="cap-card">
         <span class="cap-num">03 · Governance</span>
         <h3 class="cap-title serif">GRC &amp; Board Engagement</h3>
-        <p class="cap-body">Strategic advisory on integrated risk management, corporate governance, and ESG disclosure standards.[cite: 1]</p>
+        <p class="cap-body">Integrated risk management, corporate governance advisory, and ESG disclosure standards.</p>
       </div>
     </div>
   </div>
@@ -288,7 +284,7 @@
     <p class="sec-label">Get in Touch</p>
     <h2 class="sec-h serif">Available for <em>Selective</em> Mandates</h2>
     <p class="contact-body bask">
-      Charles is available on a selective basis for corporate strategy, financial advisory, capital-raising, and M&amp;A mandates and roles, and to serve as an independent Board director.[cite: 1]
+      Charles is available on a selective basis for corporate strategy, financial advisory, capital-raising, and M&amp;A mandates and roles, and to serve as an independent Board director.
     </p>
     <div class="cta-row">
       <a href="mailto:charles.gamo@gmail.com" class="c-link">charles.gamo@gmail.com</a>
